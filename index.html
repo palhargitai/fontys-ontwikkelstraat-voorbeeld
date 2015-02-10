@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Voorbeeld Ontwikkelstraat</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="css/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="css/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="css/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="css/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="css/deck.status.css">
+  <link rel="stylesheet" media="screen" href="css/deck.scale.css">
+  <link rel="stylesheet" media="screen" href="css/deck.title.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="css/horizontal-slide.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="bootstrap.css">
+  <link rel="stylesheet" media="screen" href="css/semantic.css">
+  <link rel="stylesheet" media="screen" href="css/web-2.0.css">
+  <link rel="stylesheet" media="screen" href="css/compat.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="css/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+	<div class="ui fixed inverted main menu">
+	  <div class="container">
+		  <div class="title item"><b><div class="brand-box"><div class="brand"></div></div></b> Voorbeeld Ontwikkelstraat</div>
+	  </div>
+	</div>
+																																							   
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+	<section class="slide">
+		<header>
+			<h1>Voorbeeld Ontwikkelstraat</h1>
+			<h2>Op basis van een praktijk voorbeeld.</h2>
+		</header>
+	</section>
+
+	<section class="slide">
+		<h2>Agenda</h2>
+		<ul>
+			<li>Context</li>
+			<li>Oude Situatie</li>
+			<li>Huidige Situatie</li>
+			<li>Toekomstige Situatie</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Context</h2>
+		<ul>
+			<li>Java Applicatie</li>
+			<li>Desktop Applicatie</li>
+			<li>Complexe Deployment</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Oude Situatie</h2>
+		<ul>
+			<li>Waterval</li>
+			<li>Eclipse</li>
+			<li>Ant</li>
+			<li>Clearcase</li>
+			<li>Excel/mail planning</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Nieuwe Situatie</h2>
+		<ul>
+			<li>Agile werkwijze</li>
+			<li>Jira</li>
+			<li>Eclipse</li>
+			<li>Jenkins</li>
+			<li>Gitlab</li>
+			<li>Maven</li>
+			<li>Nexus</li>
+			<li>Sonar</li>
+			<li>LDAP</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Inrichting</h2>
+		<ul>
+			<li><em>Git</em> - Git Flow, Subtree modules
+			<section class="slide">
+				<p>Commit op development branch en later merge naar master branch. Release van master branch naar release branch.</p>
+			</section>
+			<section class="slide">
+				<p>Geen losse modules in de boom, dus atomic commits, wel history loss bij release.</p>
+			</section>
+			</li>
+			<li><em>Maven</em> - Losse module boom, gegroepeerde "meta dependencies"
+			<section class="slide">
+				<p>Elke module wordt los gereleased, geen release dependency tangle.</p>
+			</section>
+			<section class="slide">
+				<p>Meta dependencies detailleren deployments.</p>
+			</section>
+			</li>
+			<li><em>Jenkins</em> - Delivery pipeline
+			<section class="slide">
+				<p>Clean - Compile - Test - Assets - Quality - Deliver - Integration Test</p>
+			</section>
+			</li>
+			<li><em>Jira</em> - Jira Agile
+			<section class="slide">
+				<p>Scrum board met taken</p>
+			</section>
+			<section class="slide">
+				<p>Backlog en sprint planning</p>
+			</section>
+			</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Inrichting - Git Flow</h2>
+		<img src="images/git-flow.png" alt="Git Flow">
+	</section>
+
+	<section class="slide">
+		<h2>Inrichting - Maven</h2>
+		<ul>
+			<li>Parent</li>
+			<li>Dependencies:
+			<ul>
+				<li>Common</li>
+				<li>Test</li>
+				<li>Runtime</li>
+				<li>Groepen (mail, office, etc.)</li>
+			</ul>
+			</li>
+			<li>Groepen:
+			<ul>
+				<li>Utils</li>
+				<li>Domain</li>
+				<li>Libraries</li>
+				<li>Applicaties</li>
+				<li>Deployables</li>
+			</ul>
+			</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Workflow - Werk voorbereiding</h2>
+		<section class="slide">
+			<p>Backlog vullen met WBS (Work breakdown structure)</p>
+		</section>
+		<section class="slide">
+			<p>Sprint content tijdens "Sprint Start", commitment van het team</p>
+		</section>
+		<section class="slide">
+			<p>Bij "Sprint Einde", demo aan key users &amp; klanten</p>
+		</section>
+	</section>
+
+	<section class="slide">
+		<h2>Workflow - Werk</h2>
+		<section class="slide">
+			<p>Oppakken taak (of taken) in Jira</p>
+		</section>
+		<section class="slide">
+			<p>Taak selecteren in Eclipse</p>
+		</section>
+		<section class="slide">
+			<p>Taak uitvoeren</p>
+		</section>
+		<section class="slide">
+			<p>Commit naar GitLab, aanroepen Jenkins</p>
+		</section>
+		<section class="slide">
+			<p>Status update taak (of taken) in Jira</p>
+		</section>
+		<section class="slide">
+			<p>Aanmaken Merge Request tbv Code Review</p>
+		</section>
+	</section>
+
+	<section class="slide">
+		<h2>Workflow - CI (Jenkins)</h2>
+		<section class="slide">
+			<p><em>Clean</em>: Schoonmaken workspace</p>
+		</section>
+		<section class="slide">
+			<p><em>Compile</em>: Compileren (integeren) van changes</p>
+		</section>
+		<section class="slide">
+			<p><em>Test</em>: Uitvoeren Unit Tests (JUnit)</p>
+		</section>
+		<section class="slide">
+			<p><em>Assets</em>: Maken van extra Assets (JavaDoc, Sources verzamelen, etc.)</p>
+		</section>
+		<section class="slide">
+			<p><em>Quality</em>: Static &amp; Dynamic code analysis met Sonar</p>
+		</section>
+		<section class="slide">
+			<p><em>Deliver</em>: Upload naar Nexus</p>
+		</section>
+		<section class="slide">
+			<p><em>Integration Test</em>: Uitvoeren van (complexere) Integratie/Systeem Tests (JUnit)</p>
+		</section>
+	</section>
+
+	<section class="slide">
+		<h2>Workflow - Rework</h2>
+		<section class="slide">
+			<p><em>Gefaalde Compilatie</em>: Mail vanuit Jenkins, Appelflappen of Worstebroodjes</p>
+		</section>
+		<section class="slide">
+			<p><em>Gefaalde Unit Tests</em>: Mail vanuit Jenkins, taak heropenen</p>
+		</section>
+		<section class="slide">
+			<p><em>Gefaalde Integratie Tests</em>: Mail vanuit Jenkins, nieuwe taak om te herzien</p>
+		</section>
+		<section class="slide">
+			<p><em>Gefaalde Quality Gates</em>: Jira taken op basis van Sonar analyse</p>
+		</section>
+	</section>
+
+	<section class="slide">
+		<h2>Workflow - Release</h2>
+		<section class="slide">
+			<p>Bij einde Sprint</p>
+		</section>
+		<section class="slide">
+			<p>In correcte volgorde release maken van aangepaste modules</p>
+		</section>
+		<section class="slide">
+			<p>Maken van deploy artifact</p>
+		</section>
+		<section class="slide">
+			<p>Deploy naar afgesproken distributie kanalen</p>
+		</section>
+	</section>
+
+	<section class="slide">
+		<h2>Workflow - Versionering (1)</h2>
+		<section class="slide">
+			<p><em>alpha</em></p>
+			<ul>
+				<li>Feature incomplete</li>
+				<li>Distributie naar key users, informeel</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<p><em>beta</em></p>
+			<ul>
+				<li>Feature complete</li>
+				<li>Distributie naar key users, formeel</li>
+				<li>distributie naar pilot users, informeel</li>
+			</ul>
+		</section>
+	</section>
+	<section class="slide">
+		<h2>Workflow - Versionering (2)</h2>
+		<section class="slide">
+			<p><em>pilot</em></p>
+			<ul>
+				<li>Feature complete</li>
+				<li>Distributie naar pilot users</li>
+			</ul>
+		</section>
+		<section class="slide">
+			<p><em>release</em></p>
+			<ul>
+				<li>Feature complete</li>
+				<li>Distributie naar alle users</li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="slide">
+		<h2>Toekomst</h2>
+		<ul>
+			<li>Web Applicatie</li>
+			<li>Continuous Deployment</li>
+			<li>DevOps team</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h1>Vragen?</h1>
+	</section>
+
+	<section class="slide">
+		<h1>Bedankt!</h1>
+	</section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="js/jquery.min.js"></script>
+<script src="js/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="js/deck.menu.js"></script>
+<script src="js/deck.goto.js"></script>
+<script src="js/deck.status.js"></script>
+<script src="js/deck.navigation.js"></script>
+<script src="js/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/**
+ * Contains css to make Semantic UI compatible with Deck.js
+ */
+
+.slide h2 {
+	margin-top: 2rem;
+}
+
+div.brand-box {
+	width: 100px;
+	height: 10px;
+	float: left;
+	margin: 0 0;
+	top: -7px;
+	overflow: visible;
+	position: relative;
+}
+
+div.brand {
+	float: left;
+	width: 100px;
+	height: 35px;
+}
+
